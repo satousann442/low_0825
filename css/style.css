@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+a{
+  text-decoration: none;
+}
+
 .sp{
   display: none;
 }
@@ -47,26 +51,23 @@ nav{
 .nav__right ul{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 18px;
 }
 
 .nav__right ul li{
-  position: relative;
-}
-/* 疑似要素効かない */
-.nav__right ul li ::after{
-  content:"";
-  display:block;
-  width: 2px;
-  height: 36px;
-  background-color: #000000;
-  position: absolute;
-  right: -1;
-  top:calc((100% - 20px)/2);
+  line-height: 26px;
+  border-right: 1px solid #000000;
+  padding-right: 2rem;
 }
 
-.nav__right ul li:last-child ::after{
-  content:none;
+.nav__right ul li:first-child{
+  border-left: 1px solid #000000;
+  padding-left: 1.5rem;
+}
+
+.nav__right ul li:last-child{
+  border-right: none
 }
 
 @media screen and (max-width:768px){
@@ -190,18 +191,25 @@ nav{
   white-space: nowrap;
   }
 
-  h1::before,
-  h1::after {
+  #point h1::before
+  {
     content: '';
     flex-grow: 0.3;
     height: 3px;
     background: #000000;
   }
 
-  h1::before {
+  #point h1::after {
+    content: '';
+    flex-grow: 0.3;
+    height: 3px;
+    background: #000000;
+  }
+
+  #point h1::before {
     margin-right: 30px;
   }
-  h1::after {
+  #point h1::after {
     margin-left: 30px;
   }
   .point__text--span{
@@ -414,7 +422,7 @@ nav{
   }
 
   .office__content--right h1{
-    font-size: 40px;
+    font-size: 30px;
     text-align: left;
     text-align: center;
   }
@@ -430,7 +438,7 @@ nav{
     font-size: 20px;
     max-width: 522px;
     text-align: left;
-    padding-top: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -446,7 +454,7 @@ nav{
 }
 
 .contact__box{
-  width: 719px;
+  max-width: 719px;
   height: auto;
   padding-bottom: 2rem;
   text-align: center;
@@ -473,7 +481,7 @@ nav{
   }
 
   .contact__box{
-    max-width: 768px;
+    max-width: 719px;
     height: auto;
     padding-bottom: 2rem;
     text-align: center;
@@ -482,6 +490,7 @@ nav{
   }
 
 .contact__box h1{
+  background-color: #F0F0F0;
   font-size: 30px;
   padding-top: 2rem;
   line-height: 40px;
@@ -497,7 +506,7 @@ footer ul{
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 717px;
+  max-width: 717px;
   padding: 1rem 0;
   font-family: 'Noto Sans JP';
   font-weight: normal;
