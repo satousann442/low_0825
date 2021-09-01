@@ -57,8 +57,12 @@ nav{
 
 .nav__right ul li{
   line-height: 26px;
+}
+
+.nav__right ul li::after {
+  content: "";
   border-right: 1px solid #000000;
-  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .nav__right ul li:first-child{
@@ -66,7 +70,7 @@ nav{
   padding-left: 1.5rem;
 }
 
-.nav__right ul li:last-child{
+.nav__right ul li:last-child::after{
   border-right: none
 }
 
@@ -104,7 +108,6 @@ nav{
   color: #ffffff;
   font-family: 'Noto Serif JP';
   font-weight: normal;
-  white-space: nowrap;
   text-align: center;
   font-size: 25px;
   width: 404px;
@@ -119,7 +122,6 @@ nav{
   color: #ffffff;
   font-family: 'Noto Serif JP';
   font-weight: normal;
-  white-space: nowrap;
   text-align: center;
   font-size: 49px;
   border-top:3px solid #ffffff;
@@ -132,19 +134,22 @@ nav{
   #mv{
     background:none;
     background-color: #0F6B4D;
-    height: 80vh;
+    height: auto;
   }
 
   .mv__box--back{
     background-color: rgba(67,139,123,0);
     margin: 0 auto;
-    max-width: 768px;
+    /* max-width: 768px; */
+    width: 100%;
+    padding-bottom: 3rem;
+    height: auto;
   }
 
   .mv__box--front{
     background-color: rgba(67,139,123,0);
     margin: 0 auto;
-    max-width: 756px;
+    width: 90%;
 }
 
   #mv h1{
@@ -152,23 +157,24 @@ nav{
     padding-bottom: 3rem;
     color: #ffffff;
     text-align: center;
-    font-size: 30px;
-    max-width: 756px;
+    font-size: 25px;
+    width: 100%;
     margin: 0 auto;
     line-height: 46px;
   }
 
   #mv h2{
-    max-width: 756px;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color: #ffffff;
     text-align: center;
-    font-size: 54px;
+    font-size: 40px;
     border-top:3px solid #ffffff;
     border-bottom: 3px solid #ffffff;
     margin:  0 auto;
     line-height: 74px;
+
   }
   }
 
